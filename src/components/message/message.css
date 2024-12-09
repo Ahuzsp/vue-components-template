@@ -1,0 +1,52 @@
+.massage-container {
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  padding: 12px;
+  border-radius: 6px;
+  transform: translate(-50%, 0);
+  z-index: 9999;
+}
+.massage-container.fade-in {
+  animation: fadeIn 0.3s;
+}
+.massage-container.fade-out {
+  transform: translate(-50%, -200px);
+  transition: transform ease-in-out 0.3s;
+}
+.massage-container.success {
+  background-color: #f0f9eb;
+  color: #67c23a;
+}
+.massage-container.error {
+  background-color: #f8d7da;
+  color: #dc3545;
+}
+.massage-container.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+.massage-container.info {
+  background-color: #edf2fc;
+  color: #a89399;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* @keyframes fadeOut {
+  from {
+    top: 25px;
+  }
+  to {
+    top: -200px;
+  }
+} */
